@@ -1,0 +1,277 @@
+/*@charset "utf-8";*/
+.layout
+{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-color: #C4EAFF;
+    background-image: url('../images/bg.jpg');
+    background-position: top;
+    background-repeat: repeat-x;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.BannerTop
+{
+    height: 43px;
+    background-image: url('../images/top.jpg');
+    background-repeat: repeat-x;
+}
+
+.MainTable
+{
+    width: 950px;
+}
+
+.ContentColumn
+{
+    width: 950px;
+}
+
+.Left
+{
+    width: 15px;
+    background-image: url('../images/left.jpg');
+    background-repeat: repeat-y;
+}
+
+.Right
+{
+    width: 15px;
+    background-image: url('../images/right.jpg');
+    background-repeat: repeat-y;
+}
+
+.LeftTOP
+{
+    width: 15px;
+}
+
+.RightTOP
+{
+    width: 15px;
+}
+
+.ContentArea
+{
+    background-color: #FFF;
+}
+
+.ContentTable
+{
+    width: 100%;
+}
+
+.MenuColumn
+{
+    width: 180px;
+    background-image: url('../images/menu_bg.jpg');
+    background-repeat: repeat-y;
+}
+
+.TopMenuSection
+{
+    margin: 13px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 12px;
+    color: #003155;
+}
+
+
+/* CONTENT FORMATTING */
+.ContentSection
+{
+    margin: 0px;
+    text-align: justify;
+    color: #003155;
+    font-size: 13px;
+}
+
+.Footer
+{
+    height: 50px;
+    background-image: url('../images/footer_bg.jpg');
+    background-repeat: repeat-x;
+}
+
+.FooterContents
+{
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-----------------------TABLE FORMATTING -------------------------*/
+.tr
+{
+    border-collapse: collapse;
+    height: 20px;
+}
+
+.TableRow1
+{
+    background-color: #F1F5F8;
+    text-align: center;
+}
+.TableRow2
+{
+    background-color: #FAFAFA;
+    text-align: center;
+}
+.TableBorder
+{
+    border: solid 1px #CCC;
+}
+.TableHeader
+{
+    /*background-image: url(images/table_header.jpg); */
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 30px;
+    background-image: url('../images/table_header.jpg');
+}
+
+.cntMainTableBorder
+{
+    border-style: solid;
+    border-width: 0px 0px 0px 0px; /*border-width: 0px 0px 0px 0px;*/
+    border-color: #0E773F;
+}
+
+.cntMainHeaderBar
+{
+    background-color: #999999;
+    color: #FFFFFF;
+    font-weight: bold;
+    vertical-align: middle; /*border: 1px solid #bbbbbb;      color: #454545;*/
+    font-family: tahoma, Sans-Serif;
+    font-size: 11px;
+    height: 25px;
+    padding-left: 7px;
+}
+.cntGridOuter
+{
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.hdrTd
+{
+    background-color: #0E6D32;
+    padding-left: 7px;
+    height: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: tahoma, Sans-Serif;
+}
+.mainContainer
+{
+    border: 1px solid #99CC99;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+}
+/*----------------------LOGIN INTERFACE -----------------------------*/
+.LoginBg
+{
+    background: url('../images/login_bg.jpg') repeat-x top;
+    background-color: #C4EAFF;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.LoginTable
+{
+    width: 810px;
+    background: url('../images/loginMain.jpg') no-repeat center;
+    height: 425px;
+}
+.LoginSection
+{
+    margin-left: 500px;
+    margin-top: 150px;
+    margin-right: 20px;
+}
+.LoginSectionTable
+{
+    width: 100%;
+}
+.LoginTexts
+{
+    font-size: 24px;
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.LoginFormFields
+{
+    font-size: 18px;
+    color: #147CB3;
+    text-align: left;
+}
+.SubmitButton
+{
+    border: #003366 solid 1px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: url('../images/submitBT_bg.jpg') repeat-x;
+}
+.errorMessage
+{
+    font-size: 13px;
+    color: #CC3300;
+    text-align: left;
+    font-style: normal;
+}
+.RedFont
+{
+    color: #CC3300;
+}
+
+/*ammend later */
+
+.editPanelTitle
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+    font-family: tahoma;
+    width: 100%;
+    padding-left: 32px !important;
+    background-color: #6B6B6B;
+    border-bottom: #849FCC 1px solid; /*background-image: url(images/bulletIm.gif);*/
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 25px !important;
+}
+.LabelWithoutBold
+{
+    /*border: 1px solid #bbbbbb;*/
+    color: #454545;
+    font-family: tahoma, Sans-Serif;
+    font-size: 11px;
+    height: 19px;
+    font-weight: normal;
+}
+.LabelBold
+{
+    /*border: 1px solid #bbbbbb;*/
+    color: #454545;
+    font-family: tahoma, Sans-Serif;
+    font-size: 11px;
+    height: 19px;
+    font-weight: bold;
+}
+.imageContainer
+{
+    vertical-align: top;
+}
+.imageContainer img {float :right;}

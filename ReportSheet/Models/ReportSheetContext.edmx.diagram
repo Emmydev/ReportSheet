@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e86ecc57480a493aadf4b8488bd95296" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="ReportSheetModel.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="2.125" />
+        <EntityTypeShape EntityType="ReportSheetModel.Curriculum" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="ReportSheetModel.AspNetRole" Width="1.5" PointX="5.75" PointY="2.125" />
+        <EntityTypeShape EntityType="ReportSheetModel.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="11.375" />
+        <EntityTypeShape EntityType="ReportSheetModel.Course" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ReportSheetModel.Category" Width="1.5" PointX="12.625" PointY="7.875" />
+        <AssociationConnector Association="ReportSheetModel.FK_Course_Category" />
+        <EntityTypeShape EntityType="ReportSheetModel.Subject" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="ReportSheetModel.Resource" PointX="15" PointY="4.625" Width="1.5" />
+        <AssociationConnector Association="ReportSheetModel.FK_Resources_Category" />
+        <AssociationConnector Association="ReportSheetModel.FK_Resources_Curriculum" />
+        <AssociationConnector Association="ReportSheetModel.FK_Resources_Subject" />
+        <EntityTypeShape EntityType="ReportSheetModel.AgeGroup" Width="1.5" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="ReportSheetModel.FK_AspNetUserClaims_AspNetUserClaims" />
+        <EntityTypeShape EntityType="ReportSheetModel.BlogPost" Width="1.5" PointX="10.25" PointY="4.75" />
+        <EntityTypeShape EntityType="ReportSheetModel.DownloadHistory" Width="1.5" PointX="10.25" PointY="7.75" />
+        <EntityTypeShape EntityType="ReportSheetModel.BlogComment" Width="1.5" PointX="12.625" PointY="5.125" />
+        <AssociationConnector Association="ReportSheetModel.FK_BlogComments_BlogPosts" />
+        <EntityTypeShape EntityType="ReportSheetModel.AspNetUserRole" Width="1.5" PointX="10.25" PointY="0.75" />
+        <EntityTypeShape EntityType="ReportSheetModel.AspNetUser" Width="1.5" PointX="8" PointY="4.125" />
+        <AssociationConnector Association="ReportSheetModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ReportSheetModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ReportSheetModel.FK_AspNetUserRoles_AspNetUsers" />
+        <AssociationConnector Association="ReportSheetModel.FK_AspNetUsers_AspNetUsers" />
+        <AssociationConnector Association="ReportSheetModel.FK_DownloadHistory_AspNetUsers" />
+        <EntityTypeShape EntityType="ReportSheetModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="3.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,329 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ReportSheet.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    
+    <!-- start: Meta -->
+    <meta charset="utf-8"/>
+    <title>ReportSheet</title>
+    <meta name="description" content="PharmaMap"/>
+    <meta name="author" content="Tobi Jacob"/>
+    <!-- end: Meta -->
+    
+   <%--  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+    <!-- start: Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- end: Mobile Specific -->
+
+    <!-- start: JavaScript-->
+    <!--[if !IE]>-->
+   
+    <script src= '<%=ResolveUrl("assets/js/jquery.min.js")%>'></script>
+  
+    
+   
+
+   
+<link rel="icon" type="image/png" sizes="32x32" href="wsdm.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="wsdm.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="wsdm.png"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="msapplication-TileColor" content="#ffffff"/>
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+<meta name="theme-color" content="#ffffff"/>
+
+    <!-- start: CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/datepicker.css" rel="stylesheet" />
+  <link href="assets/css/style.min.css" rel="stylesheet"/>
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/retina.min.css" rel="stylesheet" />
+    <link href="assets/css/chosen.css" rel="stylesheet" />
+   
+    <link href="assets/css/font.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet" />
+<%--    <link href="assets/css/style-beft.min.css" rel="stylesheet" />--%>
+ 
+  <%--  <link href="assets/css/custom-bfet.css" rel="stylesheet" />--%>
+    <!-- end: CSS -->
+
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<script src="assets/css/ie6-8.css"></script>
+	<![endif]-->
+    
+  
+  <%--  <script src="assets/js/rightClick.js"></script>--%>
+ 
+    <asp:ContentPlaceHolder ID="headContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="mainform" runat="server">
+           <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <!-- start: Header -->
+        <header class="navbar">
+            <div class="container">
+
+                <button class="navbar-toggle btn btn-success" type="button" data-toggle="collapse" data-target=".sidebar-nav.nav-collapse">
+                    <strong>MENU</strong>
+                </button>
+
+
+                <div class="nav-no-collapse header-nav">
+                    <ul class="nav navbar-nav pull-left">
+                        <li><a id="main-menu-toggle" class="hidden-xs open"><i class="fa fa-bars"></i></a></li>
+                       <li class="dropdown hidden-xs">
+                            <a id="contactLink" class="btn dropdown-toggle" href="#">
+                                <i class="fa fa-address-card"></i>&nbsp;Contact
+                            </a>
+                        </li>
+
+                       <%-- <li class="dropdown hidden-xs">
+                            <a id="helpLink" class="btn dropdown-toggle" href="#">
+                                <i class="fa fa-question-circle"></i>&nbsp;Help
+                            </a>
+                        </li>--%>
+                    </ul>
+
+                    <ul class="nav navbar-nav pull-right">
+
+                        <!-- start: User Dropdown -->
+                        <%--<li class="dropdown hidden-xs">
+                            <asp:Label ID="UsernameLabel" CssClass="label user-label" style="color:forestgreen" runat="server"> <%: Context.User.Identity.GetUserName()  %> </asp:Label>
+                        </li>--%>
+                        <li class="">
+                            <asp:Button ID="hmeBtn" runat="server" CssClass="btn btn-sm btn-success btn-logout" OnClick="HomeBtn_Click" Text="Home"></asp:Button>
+                            <%--<span id="home" class="btn btn-sm btn-success btn-logout" runat="server"><i class="fa fa-home"></i>&nbsp; <b>Home</b></span>--%>
+                        </li> 
+                        
+                        <li class="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                         <li class="">
+                             <asp:Button ID="UploadBtn" runat="server" CssClass="btn btn-sm btn-success btn-logout" OnClick="UploadBtn_Click" Text="Upload"></asp:Button>
+                            <%--<span id="upload" class="btn btn-sm btn-success btn-logout"><i class="fa fa-upload"></i>&nbsp; <b>Upload</b></span>--%>
+                        </li> 
+                        <li class="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                         <li class="">
+                              <asp:Button ID="DownloadBtn" runat="server" CssClass="btn btn-sm btn-success btn-logout" OnClick="DownloadBtn_Click" Text="Download"></asp:Button>
+                            <%--<span id="download" class="btn btn-sm btn-success btn-logout"><i class="fa fa-download"></i>&nbsp; <b>Download</b></span>--%>
+                        </li> 
+                        <li class="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                        <li class="">
+                            <span id="logout" class="btn btn-sm btn-danger btn-logout"><i class="fa fa-sign-out"></i>&nbsp; <b>Logout</b></span>
+                        </li>
+
+                        
+                     
+                    
+                        <!-- end: User Dropdown -->
+                    </ul>
+                </div>
+                <!-- end: Header Menu -->
+
+            </div>
+        </header>
+        <!-- end: Header -->
+
+       
+        <!-- start: Ticker bar -->
+        <header class="ticker-bar ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end: Tickr -->
+
+        <!-- start: container-->
+        <div class="container">
+            <div class="row">
+                <!-- start: Main Menu -->
+                <div id="sidebar-left" class="col-lg-3 col-md-9 col-sm-1">
+                     <img class="img-responsive" style="max-height: 80px;padding:5px; width: auto" src='<%=ResolveUrl("~/assets/img/logo.png") %>' />
+                    <div class ="col-lg-3">
+
+                    </div>
+                    <div></div>
+                    <div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
+                        <ul class="nav nav-tabs nav-stacked main-menu">
+                       
+                          <%-- <%= menuGenerator %>--%>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end: Main Menu -->
+                <div id="content" class="col-lg-9 col-md-9 col-sm-11" style="min-height: 200px;">
+                    <!-- start: Content -->
+                    <asp:ContentPlaceHolder ID="mainContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- end: Content -->
+                </div>
+
+
+            </div>
+            <!--/row-->
+
+        </div>
+        <!--/container-->
+        <div class="clearfix"></div>
+       <div class="clearfix"></div>
+        <footer>
+           <p style="text-align:center;">&copy; <%: DateTime.Now.Year %> All Rights Reserved -<strong> Emedrep Nigeria Limited</strong></p>
+        </footer>
+
+        <!--Logout Modal-->
+        <div class="modal fade" id="confirmLogoutModal" tabindex="-1" role="dialog" aria-labelledby="confirmLogoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title" id="confirmLogoutModalLabel"><b>Logout ?</b></h3>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to logout from Report Sheet ?
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-ban"></i>Cancel</button>
+                        <asp:LinkButton CssClass="btn btn-danger" runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" ><i class="fa fa-sign-out"></i> Log Out</asp:LinkButton>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="modal fade" id="homeModal" tabindex="-1" role="dialog" aria-labelledby="homeModalLabel" aria-hidden="true">
+            
+                   
+                        
+                        <asp:LinkButton CssClass="btn btn-success" runat="server" ID="homeBtn" OnClick="homeBtn_Click1" PostBackUrl='Home.aspx' ><i class="fa fa-home"></i> Log Out</asp:LinkButton>
+
+                  
+                </div>
+           
+          <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title" id="contactModalLabel"><b>Contact</b></h3>
+                </div>
+                <div class="modal-body">
+                    <div runat="server" class="alert alert-success medium-font">
+                        <div class="form-horizontal" role="form">
+                            <div class="form-group form-group-mini">
+                                <label for="lastLoginLabel" class="col-sm-4 control-label control-label-mini text-warning"><i class="fa fa-home"></i>&nbspHead Office :</label>
+                                <div class="col-sm-8">
+                                   Ememdrep Nigeria
+                                    Plot 15, Block J Alausa CBD Ikeja, Otunba Jobi Fele Way, Alausa.
+
+                                </div>
+                            </div>
+                            <div class="form-group form-group-mini">
+                                <label for="lastLoginLabel" class="col-sm-4 control-label control-label-mini text-warning"><i class="fa fa-envelope"></i>&nbspEmail Address :</label>
+                                <div class="col-sm-8">
+                                    hello@emedrep.com.ng
+                                </div>
+                            </div>
+                            <div class="form-group form-group-mini">
+                                <label for="lastLoginLabel" class="col-sm-4 control-label control-label-mini text-warning"><i class="fa fa-phone-square"></i>&nbspHelplines :</label>
+                                <div class="col-sm-8">
+                                     +23481 111 0604
+                                </div>
+                            </div>
+                            <div class="form-group form-group-mini">
+                                <label for="lastLoginLabel" class="col-sm-4 control-label control-label-mini text-warning"><i class="fa fa-globe"></i>&nbspWebsite :</label>
+                                <div class="col-sm-8">
+                                    www.emedrep.com.ng
+                                </div>
+                                 <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                            </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+           <!--Help Modal-->
+    <%--<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title" id="helpModalLabel"><b>FREQUENTLY ASKED QUESTIONs (FAQ) </b></h3>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-close"></i>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>--%>
+
+   
+          
+        
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/jquery-migrate.min.js")%>'></script>
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/bootstrap.min.js")%>'></script>
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/jquery-custom.js")%>'></script>
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/custom.min.js")%>'></script>
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/core.min.js")%>'></script>
+        <script type="text/javascript" src='<%:ResolveUrl("assets/js/jquery-ui.js")%>'></script>
+          <script type="text/javascript" src='<%:ResolveUrl("assets/js/highcharts.js")%>'></script>
+         
+
+        <script>
+            $(document).ready(function () {
+
+                $("#logout").click(function () {
+                    $("#confirmLogoutModal").modal({ backdrop: 'static' });
+                });
+
+                //function homeBtn_Click1() {
+                //    window.location.href = "https://www.tutorialrepublic.com/";
+                //}
+                $("#home").click(function () {
+                var url="Home.aspx";
+                $("#homeBtn_Click1").attr('href', url);
+                });
+            });
+
+
+        </script>
+          <script>
+        $(document).ready(function () {
+           
+            $("#contactLink").click(function () {
+                $("#contactModal").modal({ backdrop: 'static' });
+            });
+            $("#helpLink").click(function () {
+                $("#helpModal").modal({ backdrop: 'static' });
+            });
+        });
+    </script>
+        <asp:ContentPlaceHolder ID="scriptsContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
+

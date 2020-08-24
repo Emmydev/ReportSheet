@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="" title="Admin Site" description="Adminsite">
+      <siteMapNode url="~/Admin/Dashboard.aspx" title="Dashboard"  description="false" roles="Wholesaler,Retailer" resourceKey="fa fa-dashboard">
+      </siteMapNode>
+
+      <siteMapNode url="~/Admin/Upload.aspx#" title="Resources" description="true" roles="Wholesaler" resourceKey="fa fa-file-text-o">
+        <siteMapNode  url="~/Admin/Upload.aspx" title="Add Resources"  description="false" roles="Wholesaler"/>
+        <siteMapNode  url="~/Admin/ViewResources.aspx" title="View Resources"  description="false" roles="Wholesaler"/>
+      </siteMapNode>
+
+      <siteMapNode url="~/Admin/ManageSubjects.aspx#" title="Subjects"  description="true" roles="Wholesaler" resourceKey="fa fa-list">
+        <siteMapNode url="~/Admin/ManageSubjects.aspx" title="Manage Subjects"   roles="Wholesaler" /> 
+      </siteMapNode>
+
+      <siteMapNode url="~/Admin/AddCategory.aspx#" title="Category"  description="true" roles="Wholesaler" resourceKey="fa fa-list">
+        <siteMapNode url="~/Admin/AddCategory.aspx" title="Manage Category"   roles="Wholesaler" />
+      </siteMapNode>
+      <siteMapNode url="~/Admin/DownloadHistory.aspx#"  title="History"  description="true" roles="Wholesaler" resourceKey="fa fa-list">
+        <siteMapNode url="~/Admin/DownloadHistory.aspx" title="Downloads History"  roles="Wholesaler" />
+      </siteMapNode>
+
+      <siteMapNode url="~/Admin/CreatePost.aspx#"  title="Blog"  description="true" roles="Wholesaler" resourceKey="fa fa-file-text-o">
+        <siteMapNode url="~/Admin/CreatePost.aspx" title="Create Post"  roles="Wholesaler" />
+        <siteMapNode url="~/Admin/ViewPost.aspx" title="Manage Post"  roles="Wholesaler" />
+      </siteMapNode>
+     
+      <!--<siteMapNode url="~/Admin/Settings.aspx#" title="Settings"  description="true" roles="Retailer" resourceKey="fa fa-cog">
+        <siteMapNode url="~/Admin/ChangePassword.aspx" title="Change Password"   roles="Retailer" />
+      </siteMapNode>-->
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Dashboard.aspx#" title="Dashboard"  description="">
+    <siteMapNode url="" title=""  description="" />
+    <siteMapNode url="" title=""  description="" />
+  </siteMapNode>
+
+  <siteMapNode url="ManageCategory.aspx#" title="Manage Category"  description="">
+    <siteMapNode url="AddCategory.aspx" title="Manage Category"  description="" />
+  </siteMapNode>
+
+  <siteMapNode url="ManageCategory.aspx#" title="Manage Category"  description="">
+    <siteMapNode url="" title="Manage Category"  description="" />
+    <siteMapNode url="" title=""  description="" />
+  </siteMapNode>
+
+  <siteMapNode url="ManageWorkSheet.aspx#" title="Manage Worksheet"  description="">
+    <siteMapNode url="" title=""  description="" />
+    <siteMapNode url="" title=""  description="" />
+  </siteMapNode>
+</siteMap>-->
